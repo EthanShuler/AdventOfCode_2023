@@ -2,15 +2,23 @@
 
 import pathlib
 import sys
+import re
+from rich import print
+from rich import pretty
+pretty.install()
 
 def parse(puzzle_input):
-    """Parse input."""
+    rows = puzzle_input.split('\n')
+    return rows
 
 def part1(data):
-    """Solve part 1."""
+    sum = 0
+   
+    return sum
+            
 
 def part2(data):
-    """Solve part 2."""
+    return 0;
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input."""
