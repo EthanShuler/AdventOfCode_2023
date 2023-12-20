@@ -1,4 +1,4 @@
-# aoc202305.py
+# day5.py
 
 import pathlib
 import sys
