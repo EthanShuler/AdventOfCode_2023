@@ -1,4 +1,4 @@
 # Advent of Code 2023
 `pip install numpy`
 `pip install pytest`
-`pip install rich`
+`pip install rich` 

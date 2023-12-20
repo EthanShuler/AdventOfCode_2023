@@ -50,7 +50,15 @@ def part1(seeds, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, 
     return min([seedToLocation(seed, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, lightToTemperature, temperatureToHumidity, humidityToLocation) for seed in seeds])
 
 def part2(seeds, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, lightToTemperature, temperatureToHumidity, humidityToLocation):
-    pass
+    minLocation = sys.maxsize;
+    for i in range(0, len(seeds) -2, 2):
+        startingSeed = seeds[i]
+        seedRange = seeds[i+1]
+        for s in range(startingSeed, startingSeed + seedRange):
+            location = seedToLocation(s, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, lightToTemperature, temperatureToHumidity, humidityToLocation)
+            if location < minLocation:
+                minLocation = location
+    return minLocation
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input."""
