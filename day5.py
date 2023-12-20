@@ -2,9 +2,6 @@
 
 import pathlib
 import sys
-from rich import print
-from rich import pretty
-pretty.install()
 
 def getAlmanacMap(lines, index):
     almanacMap = []
@@ -51,13 +48,13 @@ def part1(seeds, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, 
 
 def part2(seeds, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, lightToTemperature, temperatureToHumidity, humidityToLocation):
     minLocation = sys.maxsize;
-    for i in range(0, len(seeds) -2, 2):
-        startingSeed = seeds[i]
-        seedRange = seeds[i+1]
-        for s in range(startingSeed, startingSeed + seedRange):
-            location = seedToLocation(s, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, lightToTemperature, temperatureToHumidity, humidityToLocation)
-            if location < minLocation:
-                minLocation = location
+    # for i in range(0, len(seeds) -2, 2):
+    #     startingSeed = seeds[i]
+    #     seedRange = seeds[i+1]
+    #     for s in range(startingSeed, startingSeed + seedRange):
+    #         location = seedToLocation(s, seedToSoil, soilToFertilizer, fertilizerToWater, waterToLight, lightToTemperature, temperatureToHumidity, humidityToLocation)
+    #         if location < minLocation:
+    #             minLocation = location
     return minLocation
 
 def solve(puzzle_input):
